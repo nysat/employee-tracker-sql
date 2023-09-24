@@ -1,7 +1,8 @@
-# employee-tracker-sql
+# Employee-tracker-sql
 ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
 ## Description
-Throughout this porject I created a database that shows Employees, Departments, and Salaries. The application lets you navigate through it to view all departments, view employees, add employees, add department roles, update an employee role
+Throughout this project I created a database that shows Employees, Departments, and Salaries. The application lets you navigate through it to view all departments, view employees, add employees, add department roles, update an employee role, ETC. As you interact with it, it will give different prompts as to what you would want to do with the database. 
+It was made to extend my knowledge of mysql and intended to help practice everything i have learned in the bootcamp so far. 
 ##### Deployed Application
 n/a
 ##### Screenshot
