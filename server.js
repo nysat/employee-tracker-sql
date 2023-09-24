@@ -25,68 +25,8 @@ function start() {
             "Add Role",
             "View All Departments",
             "Add Department",
-            "Exit",
-        ],
-    })
-    .then((answer) => {
-        switch (answer.action){
-            case "View all employees":
-                viewAllEmployees();
-                break;
-            case "Add an employee":
-                addEmployee();
-                break;
-            case "Update an employee role":
-                updateEmployeeRole();
-                break;
-            case "View All Roles":
-                viewRoles();
-                break;
-            case "Add Role":
-                addRole();
-                break;
-            case "View All Departments":
-                viewAllDepartments();
-                break;
-            case "Add Department":
-                addDepartment();
-                break;
-        }
-    });
-};
-
-//VIEW ALL EMPLOYEES OPTIION
-function viewAllEmployees() {
-    const query = `
-    SELECT e.id, e.first_name, e.last_name, r.title, department_id, CONCAT(m.first_name, ' ', m.last_name) AS manager_name
-    FROM employee e
-    LEFT JOIN role r ON e.role_id = r.id
-    LEFT JOIN department d ON r.department_id = d.id
-    `;
-    connection.query(query, (err, res) => {
-        if (err) throw err;
-        console.table(res);
-        start(); //restarts application 
-    });
-}
-
-//ADD EMPLOYEE 
-function start() {
-    inquirer
-    .prompt ({
-        type: "list",
-        name: "action",
-        message: "What would you like to do?",
-        choices: [
-            "View all employees",
-            "Add an employee",
-            "Update an employee role",
-            "View All Roles",
-            "Add Role",
-            "View All Departments",
-            "Add Department",
             "Delete an employee",
-            "Delete Role", 
+            "Delete Role",
             "Exit",
         ],
     })
